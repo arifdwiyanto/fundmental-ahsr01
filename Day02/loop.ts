@@ -48,9 +48,12 @@ while (count < 5) {
  * } while (condition)
  */
 
-let counter: number = 5;
+let counter: number = 0;
 do {
     console.log(counter);
+    if (counter === 3) {
+        break;
+    }
     counter++;
-} while (counter < 10);
+} while (counter < 5);
 
