@@ -28,3 +28,17 @@ let centimeter: number = 100000;
 // Define variable kilometer = centimeter / 100000
 let kilometer: number = centimeter / 100000;
 console.log(`${centimeter} cm is equal to ${kilometer} km`);
+
+// 4. Format number as currency (IDR)
+// Reassign mNumber
+mNumber = 1000;
+
+// convert mNumber to string currency IDR
+let currency: string = mNumber.toLocaleString("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 2
+
+});
+
+console.log(currency);
