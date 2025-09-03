@@ -20,3 +20,10 @@ if (checkName === reverseName) {
 } else {
     console.log(`${checkName} is not palindrom name`);
 }
+
+// 3. Convert centimeter to kilometer
+// Define variable centimeter as input
+let centimeter: number = 100000;
+
+let kilometer: number = centimeter / 100000;
+console.log(`${centimeter} cm is equal to ${kilometer} km`);
