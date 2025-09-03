@@ -42,3 +42,20 @@ let currency: string = mNumber.toLocaleString("id-ID", {
 });
 
 console.log(currency);
+
+// 5. Remove the first occurrence of a give "search string" from a string
+// Define variable phrase, searchString as input string, and resultPhrase for the output
+let phrase: string = "Hello world";
+let searchString: string = "ell";
+let resultPhrase: string;
+
+// Check if phrase include searchString
+if (phrase.includes(searchString)) {
+    // Remove searchString from phrase
+    resultPhrase = phrase.replaceAll(searchString, "");
+} else {
+    resultPhrase = `${phrase} does not include ${searchString}`
+}
+
+console.log(resultPhrase);
+
