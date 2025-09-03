@@ -25,5 +25,6 @@ if (checkName === reverseName) {
 // Define variable centimeter as input
 let centimeter: number = 100000;
 
+// Define variable kilometer = centimeter / 100000
 let kilometer: number = centimeter / 100000;
 console.log(`${centimeter} cm is equal to ${kilometer} km`);
