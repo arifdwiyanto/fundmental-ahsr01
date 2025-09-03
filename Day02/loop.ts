@@ -34,10 +34,10 @@ while (true) {
 }
 
 // while loop predictable
-let count: number = 0;
-while (count < 5) {
-    console.log(`Loop count=${count}`);
-    count++;
+let count2: number = 0;
+while (count2 < 5) {
+    console.log(`Loop count=${count2}`);
+    count2++;
 }
 
 /**
