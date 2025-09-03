@@ -3,6 +3,6 @@
 let mNumber: number = 9;
 
 // Add FOR loop statement to print multiplication table
-for (let i: number = 0; i < mNumber; i++) {
+for (let i: number = 1; i <= 10; i++) {
   console.log(`${mNumber} x ${i}`);
 }
