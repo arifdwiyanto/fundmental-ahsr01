@@ -59,3 +59,20 @@ if (phrase.includes(searchString)) {
 
 console.log(resultPhrase);
 
+// 6. Capitalize the first letter of each word in a string
+phrase = "hello world";
+
+// Define splitPhrase variable to split each words
+let splitPhrase: string[] = phrase.split(" ");
+
+let capitalizedPhrase: string;
+
+// Use charAt(0) then toUpperCase to make first letter uppercase and substring to extract the rest string
+for (let i: number = 0; i < splitPhrase.length; i++) {
+    splitPhrase[i] = splitPhrase[i].charAt(0).toUpperCase() + splitPhrase[i].substring(1);
+}
+
+// Join earch words to become one string
+capitalizedPhrase = splitPhrase.join(" ");
+console.log(capitalizedPhrase);
+
