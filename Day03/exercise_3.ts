@@ -93,3 +93,20 @@ for (let i: number = 0; i < phrase.length; i++) {
 
 console.log(swapPhraseResult);
 
+// 8. Find the largest of two given integers
+// Define variable num1, num2, and largestNum
+let num1: number = 42;
+let num2: number = 27;
+let largestNum: number;
+
+// Use IF condition to compare between two given integers
+if (num1 > num2) {
+    largestNum = num1;
+} else if (num2 > num1) {
+    largestNum = num2;
+} else {
+    largestNum = num1;
+}
+
+console.log(`The largest number is ${largestNum}`);
+
