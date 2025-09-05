@@ -110,3 +110,48 @@ if (num1 > num2) {
 
 console.log(`The largest number is ${largestNum}`);
 
+// 9. Conditional statement to sort three numbers
+// Reassign num1 & num2 and define variable num3 and sortedNum
+
+num1 = 42;
+num2 = 27;
+let num3: number = 18;
+let sortedNum1: number=0;
+let sortedNum2: number=0;
+let sortedNum3: number=0;
+
+// Use IF condition to sort the three numbers
+if (num1 <= num2 && num1 <= num3) {
+    if (num2 <= num3) {
+        sortedNum1 = num1;
+        sortedNum2 = num2;
+        sortedNum3 = num3;
+    } else {
+        sortedNum1 = num1;
+        sortedNum2 = num3;
+        sortedNum3 = num2;
+    }
+} else if (num2 <= num1 && num2 <= num3) {
+    if (num1 <= num3) {
+        sortedNum1 = num2;
+        sortedNum2 = num1;
+        sortedNum3 = num3;
+    } else {
+        sortedNum1 = num2;
+        sortedNum2 = num3;
+        sortedNum3 = num1;
+    }
+} else {
+    if (num1 <= num2) {
+        sortedNum1 = num3;
+        sortedNum2 = num1;
+        sortedNum3 = num2;
+    } else {
+        sortedNum1 = num3;
+        sortedNum2 = num2;
+        sortedNum3 = num1;
+    }
+}
+
+console.log(sortedNum1, sortedNum2, sortedNum3);
+
