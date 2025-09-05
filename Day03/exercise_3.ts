@@ -171,3 +171,11 @@ if (typeof (data) === "string") {
 
 console.log(dataTypeNumber);
 
+// 11. Change every letter a into * from a string of input
+phrase = "An apple a day keeps the doctor away"
+
+// Use replaceAll function to replace a and A
+phrase = phrase.replaceAll("a","*")
+phrase = phrase.replaceAll("A","*")
+
+console.log(phrase);
