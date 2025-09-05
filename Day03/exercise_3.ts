@@ -76,3 +76,20 @@ for (let i: number = 0; i < splitPhrase.length; i++) {
 capitalizedPhrase = splitPhrase.join(" ");
 console.log(capitalizedPhrase);
 
+// 7. Swap the case of each character from string
+// reassign phrase variable and define empty string swapPhraseResult
+phrase = "The QuiCk BrOwN Fox";
+let swapPhraseResult: string = "";
+
+// Use FOR loop to check each character, if the character is uppercase then make it to lowercase else make it to uppercase
+for (let i: number = 0; i < phrase.length; i++) {
+    console.log(phrase[i]);
+    if (phrase[i] === phrase[i].toUpperCase()) {
+        swapPhraseResult = swapPhraseResult + phrase[i].toLowerCase();
+    } else {
+        swapPhraseResult = swapPhraseResult + phrase[i].toUpperCase();
+    }
+}
+
+console.log(swapPhraseResult);
+
