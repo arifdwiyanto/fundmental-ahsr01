@@ -116,9 +116,9 @@ console.log(`The largest number is ${largestNum}`);
 num1 = 42;
 num2 = 27;
 let num3: number = 18;
-let sortedNum1: number=0;
-let sortedNum2: number=0;
-let sortedNum3: number=0;
+let sortedNum1: number = 0;
+let sortedNum2: number = 0;
+let sortedNum3: number = 0;
 
 // Use IF condition to sort the three numbers
 if (num1 <= num2 && num1 <= num3) {
@@ -154,4 +154,20 @@ if (num1 <= num2 && num1 <= num3) {
 }
 
 console.log(sortedNum1, sortedNum2, sortedNum3);
+
+// 10. Show 1 if the input is a string, 2 if the input is a number, and 3 for others data
+// Define variable data as input
+let data: number = 1;
+let dataTypeNumber: number;
+
+// Use conditional statement to check type of data
+if (typeof (data) === "string") {
+    dataTypeNumber = 1;
+} else if (typeof (data) === "number") {
+    dataTypeNumber = 2;
+} else {
+    dataTypeNumber = 3;
+}
+
+console.log(dataTypeNumber);
 
