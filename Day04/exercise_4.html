@@ -1,0 +1,76 @@
+<script>
+    // Define variable isBackToMainMenu with initial value is set to true
+    let isBackToMainMenu = true;
+
+    // Define variable printProductList with initial value
+    let printProductList = "Daftar Produk:\n";
+
+    // Define initial 2D array products
+    const products = [
+        ["Laptop", 12, 10500000],
+        ["Printer", 15, 2000000],
+        ["Keyboard", 4, 120000],
+    ];
+
+    // Use while loop, the application keep running until condition isBackToMainMenu set to false
+    while (isBackToMainMenu === true) {
+        // Main menu
+        const mainMenu = prompt(`Menu Utama:\n1. Lihat Data\n2. Tambah Data\n3. Update Data\n4. Hapus Data\n5. Keluar\n\nPilih menu (1-5)`);
+        
+        // Use conditional statement based on choice of main menu
+        // If choice is 1 then print list of products, use for loop to iterate array products
+        if (mainMenu == 1) {
+            for (let index = 0; index < products.length; index++) {
+                const [name, stock, price] = products[index];
+                printProductList += `${index + 1}. ${name} | Stock: ${stock} | Harga: Rp${price}\n`;
+            }
+
+            alert(printProductList);
+            printProductList = "Daftar Produk:\n";
+        } else if (mainMenu == 2) { // If choice is 2 then add data to the array products by using push function
+            const addProductName = prompt("Masukkan nama produk:");
+            const addProductStock = prompt("Masukkan stok produk:");
+            const addProductPrice = prompt("Masukkan harga produk:");
+
+            products.push([addProductName, addProductStock, addProductPrice]);
+
+            alert("Produk berhasil ditambahkan!");
+        } else if (mainMenu == 3) { // If choice is 3 then replace the value of existing array products
+            const updateProductNo = prompt("Masukkan nomor produk yang ingin diupdate:");
+            const updateProductName = prompt("Nama baru (kosongkan jika tidak diubah)", "PC");
+            const updateProductStock = prompt("Stok baru (kosongkan jika tidak diubah)", 1);
+            const updateProductPrice = prompt("Harga baru (kosongkan jika tidak diubah)", 3000000);
+
+            // Check if the input is empty then no action
+            if (updateProductName != "") {
+                products[updateProductNo - 1][0] = updateProductName;
+            }
+
+            if (updateProductStock != 0) {
+                products[updateProductNo - 1][1] = updateProductStock;
+            }
+
+            if (updateProductPrice != 0) {
+                products[updateProductNo - 1][2] = updateProductPrice;
+            }
+
+            alert("Produk berhasil diupdate!");
+        } else if (mainMenu == 4) { // If the choice is 4, then remove array at index according to input using splice function
+            removeProductNo = prompt("Masukkan nomor produk yang ingin dihapus:");
+            products.splice(removeProductNo - 1, 1);
+
+            alert("Produk berhasil dihapus!");
+        } else if (mainMenu == 5 || mainMenu == null) { // If the choice is 5, then set isBacktoMainMenu to false, the application will stop
+            isBackToMainMenu = false;
+        } else { // If the input is not correct, show alert
+            alert("Pilihan yang dimasukkan tidak sesuai!");
+        }
+
+        // Check if isBackToMainMenu is false then stop the while loop process
+        if (isBackToMainMenu === false) {
+            break;
+        }
+
+        isBackToMainMenu = confirm("Kembali ke menu utama?");
+    }
+</script>
